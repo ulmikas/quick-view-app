@@ -1,7 +1,12 @@
 @import 'helpers';
 
+.noscroll {
+  overflow: hidden;
+}
+
 .quick-view {
-	position: fixed;
+  display: none;
+  position: fixed;
   background: rgba(0,0,0,.3);
   top: 0;
   bottom: 0;
@@ -9,4 +14,25 @@
   left: 0;
   overflow: auto;
   padding: 30px;
+}
+
+.quick-view--loading {
+  display: block;
+
+  &::after {
+    content: 'Loading...';
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.quick-view--shown {
+  display: block;
 }
