@@ -1,26 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+// import 'promise-polyfill';
+// import 'isomorphic-fetch';
+import { h, render } from 'preact';
+import './style/index.scss';
 
-const getProductId = el => el.className.replace(/.*ecwid-product-id-([0-9]*)$/, '$1');
-const products = [...document.querySelectorAll('.ecwid-productBrowser-productsGrid-cellTop')];
-if (products.length) {
-  const productsIds = products.map(getProductId);
-  const btns = products.map((p) => {
-    const btn = document.createElement('button');
-    btn.className = 'quick-view-btn';
-    btn.rel = getProductId(p);
-    btn.innerText = 'Quick View';
-    p.appendChild(btn);
-    return btn;
-  });
+let root;
+function init() {
+	const getProductId = el => el.className.replace(/.*ecwid-product-id-([0-9]*)$/, '$1');
 
-  const root = document.createElement('div');
-  root.id = 'quick-view-app';
-  document.body.appendChild(root);
+	const products = [].slice.apply(document.querySelectorAll('.ecwid-productBrowser-productsGrid-cellTop'));
+	
+	if (products.length) {
+		const productsIds = products.map(getProductId);
+		products.forEach((p) => {
+			if (!p.querySelector('.quick-view-btn')) {
+				const btn = document.createElement('button');
+				btn.className = 'quick-view-btn';
+				btn.rel = getProductId(p);
+				btn.innerText = 'Quick View';
+				p.appendChild(btn);
+			}
+		});
 
-  ReactDOM.render(
-    <App products={productsIds} />,
-    document.getElementById('quick-view-app'));
+		let App = require('./components/app').default;
+		root = render(<App products={productsIds} />, document.body, root);
+	}
 }
+
+// register ServiceWorker via OfflinePlugin, for prod only:
+if (process.env.NODE_ENV==='production') {
+	require('./pwa');
+}
+
+// in development, set up HMR:
+if (module.hot) {
+	//require('preact/devtools');   // turn this on if you want to enable React DevTools!
+	module.hot.accept('./components/app', () => requestAnimationFrame(init) );
+}
+
+init();
+
+
