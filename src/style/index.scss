@@ -13,7 +13,7 @@
   right: 0;
   left: 0;
   overflow: auto;
-  padding: 30px;
+  padding: 30px 60px;
 }
 
 .quick-view--loading {
@@ -35,4 +35,22 @@
 
 .quick-view--shown {
   display: block;
+}
+
+.quick-view-nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-view-nav--prev {
+  left: 0;
+}
+
+.quick-view-nav--next {
+  right: 0;
 }

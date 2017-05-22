@@ -2,7 +2,6 @@ import axios from 'axios';
 import { h, Component } from 'preact';
 
 import Product from './product';
-import Navigation from './navigation';
 
 export default class App extends Component {
   constructor(props) {
@@ -58,18 +57,26 @@ export default class App extends Component {
     }
   }
 
+  closePreview = () => {
+    this.setState({
+      shown: false,
+    });
+  }
+
   render() {
     return (
-      <div class={`quick-view${(this.state.shown ? ' quick-view--shown' : '')}${(this.state.loading ? ' quick-view--loading' : '')}`}>
+      <div>
         {(this.state.shown)
           ?
-            <div>
-              {this.state.current}
-              {(this.state.prev) ? <a href={this.state.prev} rel={this.state.prev} class="quick-view-nav prevProduct" onClick={this.openPreview}>Prev</a> : null}
+            <div class={`quick-view quick-view--shown${(this.state.loading ? ' quick-view--loading' : '')}`}>
+              <a href="/close" class="quick-view-close" onClick={this.closePreview}>Close</a>
+              {(this.state.prev) ? <a href={this.state.prev} rel={this.state.prev} class="quick-view-nav quick-view-nav--prev" onClick={this.openPreview}>Prev</a> : null}
               <Product {...this.state.product} />
-              {(this.state.next) ? <a href={this.state.next} rel={this.state.next} class="quick-view-nav nextProduct" onClick={this.openPreview}>Next</a> : null}
+              {(this.state.next) ? <a href={this.state.next} rel={this.state.next} class="quick-view-nav quick-view-nav--next" onClick={this.openPreview}>Next</a> : null}
             </div>
-          : null}
+          :
+            <div class={`quick-view${(this.state.loading ? ' quick-view--loading' : '')}`} />
+        }
       </div>
     );
   }
