@@ -1,13 +1,70 @@
 @import '~style/helpers';
 
-.qvProduct {
-	background: green;
-	padding: 20px;
-	// position: absolute;
-	// top: 30px;
-	// width: 90%;
+.qv-product {
+	font-family: 'Proxima', sans-serif;
 }
 
-.productName {
-	font-weight: 600;
+	.qv-product__container {
+		display: flex;
+
+		&, * {
+			box-sizing: border-box;
+		}
+	}
+
+	.qv-product__gallery {
+		flex: 2;
+	}
+
+	.qv-product__info {
+		flex: 1;
+		padding: 20px;
+	}
+
+	.qv-product__footer {
+		margin-left: -16px;
+		margin-right: -16px;
+		padding-top: 30px;
+	}
+
+		.qv-product__footer-link {
+			background: #000;
+			color: #fff;
+			display: block;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+.qv-product-info {}
+
+	.qv-product-info__name {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	.qv-product-info__price {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+.qv-product-description {}
+.qv-product-description__container {
+	height: 0;
+	overflow: hidden;
+	transition: height 200ms ease-out;
+
+	.qv-product-description__content {
+		opacity: 0;
+		transition: opacity 200ms ease-out;
+	}
+}
+.qv-product-description--expanded {
+	.qv-product-description__container {
+		height: auto;
+	}
+	
+	.qv-product-description__content {
+		opacity: 1;
+	}
 }

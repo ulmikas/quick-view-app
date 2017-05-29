@@ -19,6 +19,21 @@ export default class App extends Component {
 
   componentDidMount() {
     document.body.addEventListener('click', this.openPreview);
+
+    this.setState({
+      current: '49734735',
+      prev: this.getPrev('49734735'),
+      next: this.getNext('49734735'),
+      loading: true,
+    });
+    this.getProductDetails().then((res) => {
+      document.body.classList.add('noscroll');
+      this.setState({
+        product: res.data,
+        loading: false,
+        shown: true,
+      });
+    });
   }
 
   getProductDetails = () => {
@@ -38,8 +53,8 @@ export default class App extends Component {
   }
 
   openPreview = (e) => {
+    e.preventDefault();
     if (e.target.classList.contains('quick-view-btn') || e.target.classList.contains('quick-view-nav')) {
-      e.preventDefault();
       this.setState({
         current: e.target.rel,
         prev: this.getPrev(e.target.rel),
@@ -58,6 +73,7 @@ export default class App extends Component {
   }
 
   closePreview = () => {
+    document.body.classList.remove('noscroll');
     this.setState({
       shown: false,
     });
@@ -69,10 +85,12 @@ export default class App extends Component {
         {(this.state.shown)
           ?
             <div class={`quick-view quick-view--shown${(this.state.loading ? ' quick-view--loading' : '')}`}>
-              <a href="/close" class="quick-view-close" onClick={this.closePreview}>Close</a>
-              {(this.state.prev) ? <a href={this.state.prev} rel={this.state.prev} class="quick-view-nav quick-view-nav--prev" onClick={this.openPreview}>Prev</a> : null}
-              <Product {...this.state.product} />
-              {(this.state.next) ? <a href={this.state.next} rel={this.state.next} class="quick-view-nav quick-view-nav--next" onClick={this.openPreview}>Next</a> : null}
+              <div class="quick-view__container">
+                <a href="/close" class="quick-view-close" onClick={this.closePreview}>&times;</a>
+                {(this.state.prev) ? <a href={this.state.prev} rel={this.state.prev} class="quick-view-nav quick-view-nav--prev" onClick={this.openPreview}><span>Prev</span></a> : null}
+                <Product {...this.state.product} />
+                {(this.state.next) ? <a href={this.state.next} rel={this.state.next} class="quick-view-nav quick-view-nav--next" onClick={this.openPreview}><span>Next</span></a> : null}
+              </div>
             </div>
           :
             <div class={`quick-view${(this.state.loading ? ' quick-view--loading' : '')}`} />
