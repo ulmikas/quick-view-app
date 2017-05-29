@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import ProductOptions from './options';
 // import style from './style.scss';
 
 export default class ProductInfo extends Component {
@@ -23,6 +24,7 @@ export default class ProductInfo extends Component {
         {(props.inStock) ? <div class="qv-product-info__instok">In stock</div> : <div class="qv-product-info__outofstok">Out of stock</div>}
         <div class="qv-product-info__name">{props.name}</div>
         <div class="qv-product-info__price">{(!Ecwid) ? Ecwid.formatCurrency(props.price) : props.price}</div>
+        <ProductOptions {...props.options} />
         {props.wholesalePrices ? <div class="qv-product-info__wholesale">{props.wholesalePrices[0].price}</div> : ''}
         {props.quantity}
         <div>
