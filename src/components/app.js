@@ -38,7 +38,7 @@ export default class App extends Component {
 
   getProductDetails = () => {
     const sId = '7022058';
-    const sToken = 'public_i3aiWjHuZs8SFDfSziFx5wC7TbtisrPj';
+    const sToken = 'public_yNBvHgxcC35pr7bt1mQBLntdkUV98tXQ';
     return axios(`https://app.ecwid.com/api/v3/${sId}/products/${this.state.current}?token=${sToken}&cleanUrls=true`);
   }
 
