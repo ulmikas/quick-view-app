@@ -1,0 +1,8 @@
+{
+  "name": "quick-view-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ulmikas/quick-view-app.git",
+  "author": "nikolay.buzdalov <buzdalov@restream.rt.ru>",
+  "license": "MIT"
+}
