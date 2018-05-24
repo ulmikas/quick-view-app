@@ -1,0 +1,126 @@
+{
+  "data": [
+    {
+      "id": 49734739,
+      "sku": "00004",
+      "thumbnailUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/images/7022058/464713331.jpg",
+      "unlimited": true,
+      "inStock": true,
+      "name": "Cherry",
+      "price": 20,
+      "priceInProductList": 20,
+      "defaultDisplayedPrice": 22,
+      "isShippingRequired": true,
+      "weight": 0.32,
+      "url": "https://store7022058.ecwid.com/Cherry-p49734739",
+      "created": "2015-04-17 12:38:27 +0000",
+      "updated": "2017-11-16 18:44:36 +0000",
+      "createTimestamp": 1429274307,
+      "updateTimestamp": 1510857876,
+      "productClassId": 0,
+      "enabled": true,
+      "options": [
+        {
+          "type": "RADIO",
+          "name": "Size",
+          "choices": [
+            { "text": "Small", "priceModifier": 0, "priceModifierType": "ABSOLUTE" },
+            { "text": "Big", "priceModifier": 0, "priceModifierType": "ABSOLUTE" }
+          ],
+          "defaultChoice": 1,
+          "required": false
+        }
+      ],
+      "fixedShippingRateOnly": false,
+      "fixedShippingRate": 0,
+      "defaultCombinationId": 0,
+      "imageUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/default-store/00004-sq.jpg",
+      "smallThumbnailUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/images/7022058/464713342.jpg",
+      "hdThumbnailUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/images/7022058/464713343.jpg",
+      "originalImageUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/default-store/00004-sq.jpg",
+      "originalImage": {
+        "url": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/default-store/00004-sq.jpg",
+        "width": 425,
+        "height": 425
+      },
+      "borderInfo": { "dominatingColor": { "red": 255, "green": 255, "blue": 255, "alpha": 0 }, "homogeneity": true },
+      "description":
+        "<h5>Cherry</h5><p>The word cherry refers to a fleshy fruit (drupe) that contains a single stony seed. The cherry belongs to the family Rosaceae, genus Prunus, along with almonds, peaches, plums, apricots and bird cherries. The subgenus, Cerasus, is distinguished by having the flowers in small corymbs of several together (not singly, nor in racemes), and by having a smooth fruit with only a weak groove or none along one side. The subgenus is native to the temperate regions of the Northern Hemisphere, with two species in America, three in Europe, and the remainder in Asia.</p><div style=\"padding: 24px 24px 24px 21px; display: block; background-color: #ececec;\">From <a style=\"color: #1e7ec8; text-decoration: underline;\" title=\"Wikipedia\" href=\"http://en.wikipedia.org\">Wikipedia</a>, the free encyclopedia</div>",
+      "galleryImages": [],
+      "categoryIds": [12918421, 19157014],
+      "categories": [{ "id": 12918421, "enabled": true }, { "id": 19157014, "enabled": true }],
+      "defaultCategoryId": 19157014,
+      "favorites": { "count": 0, "displayedCount": "0" },
+      "attributes": [
+        { "id": 7971660, "name": "Уникальный код", "value": "test", "show": "DESCR", "type": "UPC" },
+        { "id": 7971662, "name": "Бренд", "value": "werwer", "show": "DESCR", "type": "BRAND" },
+        { "id": 7971663, "name": "Color", "value": "werwer", "show": "DESCR", "type": "CUSTOM" }
+      ],
+      "relatedProducts": {
+        "productIds": [],
+        "relatedCategory": { "enabled": true, "categoryId": 0, "productCount": 10 }
+      },
+      "combinations": []
+    },
+    {
+      "id": 49734738,
+      "sku": "00008",
+      "thumbnailUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/images/7022058/464713396.jpg",
+      "unlimited": true,
+      "inStock": true,
+      "name": "Cucumber",
+      "price": 1.12,
+      "priceInProductList": 11.12,
+      "defaultDisplayedPrice": 12.23,
+      "isShippingRequired": false,
+      "url": "https://store7022058.ecwid.com/Cucumber-p49734738",
+      "created": "2009-07-23 13:43:59 +0000",
+      "updated": "2017-11-13 03:07:41 +0000",
+      "createTimestamp": 1248356639,
+      "updateTimestamp": 1510542461,
+      "productClassId": 0,
+      "enabled": true,
+      "options": [
+        {
+          "type": "RADIO",
+          "name": "test",
+          "choices": [{ "text": "test", "priceModifier": 10, "priceModifierType": "ABSOLUTE" }],
+          "defaultChoice": 0,
+          "required": false
+        }
+      ],
+      "fixedShippingRateOnly": false,
+      "fixedShippingRate": 0,
+      "defaultCombinationId": 0,
+      "imageUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/default-store/00008-sq.jpg",
+      "smallThumbnailUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/images/7022058/464713399.jpg",
+      "hdThumbnailUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/images/7022058/464713401.jpg",
+      "originalImageUrl": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/default-store/00008-sq.jpg",
+      "originalImage": {
+        "url": "https://ecwid-images.scdn4.secure.raxcdn.com/images.ecwid.com/default-store/00008-sq.jpg",
+        "width": 425,
+        "height": 425
+      },
+      "borderInfo": { "dominatingColor": { "red": 255, "green": 255, "blue": 255, "alpha": 0 }, "homogeneity": true },
+      "description":
+        "<h5>Cucumber</h5><p>The cucumber (Cucumis sativus) is a widely cultivated plant in the gourd family Cucurbitaceae, which includes squash, and in the same genus as the muskmelon.</p><div style=\"padding: 24px 24px 24px 21px; display: block; background-color: #ececec;\">From <a style=\"color: #1e7ec8; text-decoration: underline;\" title=\"Wikipedia\" href=\"http://en.wikipedia.org\">Wikipedia</a>, the free encyclopedia</div>",
+      "galleryImages": [],
+      "categoryIds": [12918422, 19157013, 19157014, 19157016],
+      "categories": [
+        { "id": 19157016, "enabled": true },
+        { "id": 19157013, "enabled": true },
+        { "id": 12918422, "enabled": true },
+        { "id": 19157014, "enabled": true }
+      ],
+      "defaultCategoryId": 12918422,
+      "favorites": { "count": 0, "displayedCount": "0" },
+      "attributes": [],
+      "relatedProducts": {
+        "productIds": [],
+        "relatedCategory": { "enabled": false, "categoryId": 0, "productCount": 1 }
+      },
+      "combinations": [],
+      "showOnFrontpage": 1
+    }
+  ]
+}
